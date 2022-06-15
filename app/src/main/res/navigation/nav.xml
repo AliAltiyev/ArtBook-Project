@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/artAddFragment"
+        android:name="com.example.artbookkotlin.ArtAddFragment"
+        android:label="fragment_art_add"
+        tools:layout="@layout/fragment_art_add" >
+        <action
+            android:id="@+id/action_artAddFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.artbookkotlin.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_artAddFragment"
+            app:destination="@id/artAddFragment" />
+    </fragment>
+</navigation>
